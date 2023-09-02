@@ -5,6 +5,9 @@ import (
 	"net/http"
 )
 
+// Create new type called album which is extended from the struct type, or if you did: var album struct - then that would create a new variable 'album' with it's type equal to anonymous struct.
+//
+//	https://go.dev/talks/2015/tricks.slide#6
 type album struct {
 	ID     string  `json:"id"`
 	Title  string  `json:"title"`
@@ -13,7 +16,7 @@ type album struct {
 }
 
 var albums = []album{
-	{ID: "1", Title: "Blue Train", Artist: "John Coltrane", Price: 56.99},
+	{ID: "1", Title: "Blue Train", Artist: "John Coltrane", Price: 56.97},
 	{ID: "2", Title: "Jeru", Artist: "Geri Mulligan", Price: 17.99},
 	{ID: "3", Title: "Songs of the Past", Artist: "Miles Davis", Price: 39.99},
 }
@@ -51,3 +54,5 @@ func main() {
 	router.Run("localhost:8081")
 
 }
+
+// To invoke the API for example, localhost:8081/albums
