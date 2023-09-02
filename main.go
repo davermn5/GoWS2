@@ -7,7 +7,9 @@ import (
 
 // Create new type called album which is extended from the struct type, or if you did: var album struct - then that would create a new variable 'album' with it's type equal to anonymous struct.
 //
-//	https://go.dev/talks/2015/tricks.slide#6
+//	   ID is an example of a name of a field within the struct declaration.
+//		 `json:"id"` is an example of the 'tag' that is part of the struct field declaration.
+//			https://go.dev/talks/2015/tricks.slide#6
 type album struct {
 	ID     string  `json:"id"`
 	Title  string  `json:"title"`
